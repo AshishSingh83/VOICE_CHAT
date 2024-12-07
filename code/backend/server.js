@@ -1,46 +1,4 @@
-// require('dotenv').config();
-// const express = require('express');
-// const app = express();
-// const router = require('./routes');
-// const connectDb = require('./dbconnect');
-// const cors = require('cors');
-// const cookieParser = require('cookie-parser');
 
-// //for getting cookie automatically
-// app.use(cookieParser());
-
-// const PORT = process.env.PORT || 5500 ;
-// url = process.env.DB_URL;
-// const corsOption = {
-//   credentials:true,
-//   origin:['http://localhost:3000'],
-// }
-// app.use(cors(corsOption));
-
-// //means jo bhi url /storage se start ho rahe hain unhe storage folder se serve karo
-// app.use('/storage',express.static('storage'));
-
-// //increase payload data size limit 
-// app.use(express.json({
-//   limit:'8mb'
-// }));
-// app.use(router);
-// app.get('/',(req,res)=>{
-//     res.send('heelo from express js');
-// })
-// connectDb(url)
-//   .then(() => {
-//     app.listen(PORT, "0.0.0.0", () => {
-//         console.log(`Server running at : ${PORT}`);
-//     });
-//   })
-//   .catch((error) =>{
-//     console.log("database connection error:");
-//     process.exit(1);
-//   });
-
-
-// require('dotenv').config();
 require('dotenv').config();
 const express = require('express');
 const app = express();
@@ -59,7 +17,7 @@ const io = require('socket.io')(server, {
 app.use(cookieParser());
 const corsOption = {
     credentials: true,
-    origin: ["http://localhost:3000"],
+    origin: ["http://deploy-mern-1whq.vercal.cpp"],
 };
 app.use(cors(corsOption));
 app.use('/storage', express.static('storage'));
