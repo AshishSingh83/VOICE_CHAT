@@ -17,7 +17,7 @@ const io = require('socket.io')(server, {
 app.use(cookieParser());
 const corsOption = {
     credentials: true,
-    origin: ["https://voicefe-theta.vercel.app"],
+    origin: ["https://voicefe-sable.vercel.app"],
 };
 app.use(cors(corsOption));
 app.use('/storage', express.static('storage'));
